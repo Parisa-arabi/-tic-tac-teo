@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_teo/home_page.dart';
+import 'easy.dart';
 
 void main()=>runApp(myapp());
 class myapp extends StatefulWidget {
@@ -11,28 +13,9 @@ class myapp extends StatefulWidget {
 class _myappState extends State<myapp> {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-              "tic-tac-teo",
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 30,
-            ),
-          ),
-          elevation: 0,
-          centerTitle: true,
-          backgroundColor: Colors.blueGrey[800],
-        ),
-        body: Column(
-          children:const [
-
-          ],
-        ),
-        backgroundColor: Colors.grey[700],
-      ),
-    );
+   return MaterialApp(
+     home: homepage(),
+   );
   }
 }
+
