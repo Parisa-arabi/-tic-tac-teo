@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_teo/hard.dart';
+import 'package:tic_tac_teo/medium.dart';
 import 'easy.dart';
 
 class homepage extends StatelessWidget {
@@ -29,6 +31,7 @@ class homepage extends StatelessWidget {
                 minWidth: 350,
                 height: 100,
                 child:RaisedButton(
+                  color: Colors.grey[800],
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -50,9 +53,15 @@ class homepage extends StatelessWidget {
               ButtonTheme(
                 minWidth: 350,
                 height: 100,
-                child:const RaisedButton(
-                  onPressed: null,
-                  child: Text(
+                child:RaisedButton(
+                  color: Colors.grey[800],
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context)=>medium()),
+                    );
+                  },
+                  child:const Text(
                     'medium',
                     style: TextStyle(
                       color: Colors.white70,
@@ -67,9 +76,15 @@ class homepage extends StatelessWidget {
               ButtonTheme(
                 minWidth: 350,
                 height: 100,
-                child:const RaisedButton(
-                  onPressed: null,
-                  child: Text(
+                child:RaisedButton(
+                  color: Colors.grey[800],
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context)=>hard()),
+                  );
+                    },
+                  child:const Text(
                     'hard',
                     style: TextStyle(
                       color: Colors.white70,

@@ -31,8 +31,8 @@ class easy extends StatelessWidget {
             ),
           ),
           centerTitle: true,
-          backgroundColor: Colors.blueGrey,
-
+          backgroundColor: Colors.blueGrey[800],
+          elevation: 0,
         ),
       ),
     );
