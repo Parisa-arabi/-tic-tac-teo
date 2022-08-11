@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'home_page.dart';
 
 class medium extends StatelessWidget {
@@ -7,31 +6,14 @@ class medium extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-              'medium',
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 30,
-            ),
-          ),
-          actions: <Widget>[
-            IconButton(
-                icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context)=>homepage()
-              ),
-            );},
-            ),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Medium Game',
+          style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
+      body: Center(),
+      backgroundColor: Colors.grey[700],
     );
   }
 }

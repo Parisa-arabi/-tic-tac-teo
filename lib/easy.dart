@@ -6,35 +6,14 @@ class easy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              color: Colors.white70,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context)=>const homepage()
-                  ),
-                );},
-            ),
-          ],
-          title:const Text(
-            'easy',
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 30,
-            ),
-          ),
-          centerTitle: true,
-          backgroundColor: Colors.blueGrey[800],
-          elevation: 0,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Easy Game',
+          style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
+      body: Center(),
+      backgroundColor: Colors.grey[700],
     );
   }
 }

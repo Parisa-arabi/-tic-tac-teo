@@ -8,99 +8,53 @@ class homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
-          title: const Text(
-            "tic-tac-teo",
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 30,
-            ),
+          title: Text('Tic-Tac-Teo',
+          style: Theme.of(context).appBarTheme.titleTextStyle,
           ),
-          elevation: 0,
-          centerTitle: true,
-          backgroundColor: Colors.blueGrey[800],
+          actions: [
+            IconButton(onPressed: (){}, icon: const Icon(Icons.home)),
+          ],
         ),
         body:Center(
           child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ButtonTheme(
-                minWidth: 350,
-                height: 100,
-                child:RaisedButton(
-                  color: Colors.grey[800],
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context)=>easy()),
-                    );
-                  },
-                  child: const Text(
-                    'easy',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 30,
-                    ),
-                  ),
-                ),
+             ElevatedButton(onPressed: (){
+               Navigator.push(
+                 context,
+                 MaterialPageRoute(builder: (context)=>const easy()),
+               );
+             },
+               style: const ButtonStyle(),
+               child: const Text('easy'),
+             ),
+              const SizedBox(height: 50),
+              ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=> const medium()),
+                );
+              },
+                style: const ButtonStyle(),
+                child: const Text('medi'),
               ),
-              const SizedBox(
-                height: 50,
+              const SizedBox(height: 50),
+              ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=> const hard()),
+                );
+              },
+                style: const ButtonStyle(),
+                child: const Text('hard'),
               ),
-              ButtonTheme(
-                minWidth: 350,
-                height: 100,
-                child:RaisedButton(
-                  color: Colors.grey[800],
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context)=>medium()),
-                    );
-                  },
-                  child:const Text(
-                    'medium',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 30,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              ButtonTheme(
-                minWidth: 350,
-                height: 100,
-                child:RaisedButton(
-                  color: Colors.grey[800],
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context)=>hard()),
-                  );
-                    },
-                  child:const Text(
-                    'hard',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 30,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
+              const SizedBox(height: 50),
             ],
           ),
         ),
         backgroundColor: Colors.grey[700],
-      ),
     );
   }
 }
