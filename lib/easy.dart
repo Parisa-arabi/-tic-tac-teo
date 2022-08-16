@@ -12,7 +12,6 @@ class easy extends StatelessWidget {
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
-      body: Center(),
       backgroundColor: Colors.grey[700],
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tic_tac_teo/hard.dart';
 import 'package:tic_tac_teo/medium.dart';
+import 'package:tic_tac_teo/one_palyer.dart';
+import 'package:tic_tac_teo/two_player.dart';
 import 'easy.dart';
 
 class homepage extends StatelessWidget {
@@ -24,31 +26,21 @@ class homepage extends StatelessWidget {
              ElevatedButton(onPressed: (){
                Navigator.push(
                  context,
-                 MaterialPageRoute(builder: (context)=>const easy()),
+                 MaterialPageRoute(builder: (context)=>const two_player()),
                );
              },
                style: const ButtonStyle(),
-               child: const Text('easy'),
+               child: const Text('Two Player'),
              ),
               const SizedBox(height: 50),
               ElevatedButton(onPressed: (){
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context)=> const medium()),
+                  MaterialPageRoute(builder: (context)=> const one_player()),
                 );
               },
                 style: const ButtonStyle(),
-                child: const Text('medi'),
-              ),
-              const SizedBox(height: 50),
-              ElevatedButton(onPressed: (){
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context)=> const hard()),
-                );
-              },
-                style: const ButtonStyle(),
-                child: const Text('hard'),
+                child: const Text('One Player'),
               ),
               const SizedBox(height: 50),
             ],
